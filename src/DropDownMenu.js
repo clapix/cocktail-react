@@ -5,7 +5,8 @@ class DropDownMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            spirits: '',
+            spirits: [],
+            selected: 0, // oppure 1
         }
         this.handleChangeSpirit = this.handleChangeSpirit.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
