@@ -3,10 +3,10 @@ import Archive from './Archive';
 import { getList } from "../../data/actions/api";
 
 
-const mapStateToProps = state => {
+const mapStateToProps = ({cocktails, submitted}) => {
     return {
-        cocktails: state.cocktails,
-        submitted: state.submitted,
+        cocktails: cocktails,
+        submitted: submitted,
     }
 }
 
