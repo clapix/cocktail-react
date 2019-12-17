@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
-
+import { Jumbotron, Container, Col, Row } from "react-bootstrap";
 
 class Header extends React.Component {
 
@@ -11,11 +11,11 @@ class Header extends React.Component {
         return (
             <Router>
                 <header className="page-header">
-
                     <Link to="/">
-                        <h1 className="page-header">Mixologic</h1>
+                        <img 
+                            src="assets/logo-header.png" 
+                            alt="logo"/>
                     </Link>
-
                 </header>
             </Router>)
 
