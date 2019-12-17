@@ -3,7 +3,8 @@
 }
 
 img {
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   
 }
 
@@ -30,8 +31,127 @@ code {
 
 }
 
-.page-header img {
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(lightgrey, grey), url("/assets/hero.jpg");
+    background-blend-mode: multiply;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    padding: 10%;
+    border-radius: 0;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  margin-top: 8%;
 
 }
+
+.form-label {
+  color: white;
+  font-size: 2.2em;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.form-control {
+  max-width: 40%;
+  margin: 10px;
+  border-bottom: 3px solid #e8677a;
+  color: #e8677a;
+  font-weight: bold;
+  font-size: 1.2em;
+
+}
+
+.form-control:focus {
+  max-width: 40%;
+  margin: 10px;
+  border-bottom: 3px solid #e8677a;
+  color: #e8677a;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.button {
+  background: #e8677a;
+  border: #e8677a;
+  padding: 10px 30px;
+  margin: 10px;
+  font-weight: bold;
+  
+}
+
+/* button shake */
+@keyframes swing
+{
+    10%
+    {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);   
+    }
+    20%
+    {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);  
+    }
+    30%
+    {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);  
+    }
+    40%
+    {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);   
+    }
+    60%
+    {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);   
+    }
+    70%
+    {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);   
+    }
+    80%
+    {
+        -webkit-transform: translateX(-4px);
+        transform: translateX(-4px);   
+    }
+    90%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);   
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.button:hover {
+    background: #e8677a;
+    -webkit-animation: swing 0.8s ease;
+    animation: swing 0.8s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+ 
+}
+
 
 
