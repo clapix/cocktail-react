@@ -3,6 +3,8 @@ import Header from './Header';
 import Footer from './Footer';
 import Cocktail from './Cocktail';
 import DropDownMenu from './DropDownMenu';
+import Archive from './Archive';
+
 import './../App.css';
 import {
   BrowserRouter as Router,
@@ -26,6 +28,11 @@ const App = ({
       <Router>
         <Switch>
           <Route exact path="/" component={DropDownMenu} />
+          <Archive />
+
+
+          <Route path="/spirits" component={Archive} />
+
           <Route exact path="/cocktails/:id" render={({ match }) => (
             <Cocktail id={match.params.id} />
           )} />
