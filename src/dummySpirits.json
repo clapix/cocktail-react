@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "spirit": "gin",
+            "id": 1
+        },
+        {
+            "spirit": "vodka",
+            "id": 2
+        },
+        {
+            "spirit": "rum",
+            "id": 3
+        },
+        {
+            "spirit": "brandy",
+            "id": 4
+        },
+        {
+            "spirit": "vermouth",
+            "id": 5
+        },
+        {
+            "spirit": "whiskey",
+            "id": 6
+        }
+    ]
+}

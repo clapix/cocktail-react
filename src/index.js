@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import store from "./store";
-import App from './App';
+import { Provider } from "react-redux";
+import reducer from "./data/reducer";
+import store from "./data/store";
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 const render = () => {
@@ -10,13 +12,14 @@ const render = () => {
 
     // pass in state.value as a value prop
     ReactDOM.render(
-        <App
-            spirits={state.spirits}
-            selected={state.selected}
-            cocktails={state.cocktails}
-            setCocktail={() => store.dispatch({ type: "spirits", name: "cocktails" })}
-
-        />,
+        <Provider store={store}>
+            <App
+                spirits={state.spirits}
+                selected={state.selected}
+                cocktails={state.cocktails}
+                setCocktail={() => store.dispatch({ type: "spirits", name: "cocktails" })}
+            />
+        </Provider>,
         document.getElementById('root')
     );
 };

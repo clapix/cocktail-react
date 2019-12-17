@@ -23,7 +23,6 @@ const App = ({
 // create a cocktail
 // edit a cocktail */}
 
-
       <Router>
         <Switch>
           <Route exact path="/" component={DropDownMenu} />
@@ -38,7 +37,6 @@ const App = ({
                 )} /> */}
         </Switch>
       </Router>
-
 
       <Footer />
     </>
