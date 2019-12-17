@@ -1,21 +1,12 @@
 // import initial, for reset
 import initial from "./initial";
 
-
-// // important values
-
-// const whatValue = 100;
-
-// // helper functions
-
-// const whatFunction = state => 'some logic';
-
-// // reducer functions (update, calculate...)
-
 const getCocktails = (state, { cocktails }) => {
+    console.log(cocktails.data);
     return {
         ...state,
         submitted: true,
+        loaded: true,
         cocktails: cocktails.data,
     }
 }
