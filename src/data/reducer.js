@@ -12,13 +12,11 @@ import initial from "./initial";
 
 // // reducer functions (update, calculate...)
 
-const setCocktail = (state, action) => {
+const getCocktails = (state, { cocktails }) => {
     return {
         ...state,
-        cocktails: {
-            ...state.cocktails,
-            [action.id]: action.cocktail
-        }
+        submitted: true,
+        cocktails: cocktails.data,
     }
 }
 
@@ -26,7 +24,7 @@ const setCocktail = (state, action) => {
 const reducer = (state, action) => {
     switch (action.type) {
         //function composition for multiple behaviours on one action
-        // case "setCocktail": return something(funct(funct(state, action)));
+        case "cocktailList": return getCocktails(state, action);
         default: return state;
     }
 };

@@ -1,6 +1,6 @@
 const initial = {
     spirits: [],
-    selected: 0,
+    submitted: false,
     cocktails: [],
 };
 

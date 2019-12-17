@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "mojito",
+            "imageURL": "mojito.jpg"
+        },
+        {
+            "id": 2,
+            "name": "spritz",
+            "imageURL": "spritz.jpg"
+        },
+        {
+            "id": 3,
+            "name": "cosmopolitan",
+            "imageURL": "cosmopolitan.jpg"
+        },
+        {
+            "id": 4,
+            "name": "americano",
+            "imageURL": "americano.jpg"
+        },
+        {
+            "id": 5,
+            "name": "tom collins",
+            "imageURL": "tom collins.jpg"
+        },
+        {
+            "id": 6,
+            "name": "daiquiri",
+            "imageURL": "daiquiri.jpg"
+        }
+    ]
+}

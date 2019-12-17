@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from './dummySpirits';
+import { data } from '../../data/dummySpirits';
 // import { sendDataToAPI } from './data/api';
 
 class DropDownMenu extends React.Component {
@@ -17,10 +17,10 @@ class DropDownMenu extends React.Component {
     handleSubmit(event) {
 
         event.preventDefault();
-
         this.setState({
-            submitted: true,
-        });
+            submitted: true
+        })
+        this.props.handleSave({ ...this.state });
     }
 
     // sendDataToAPI(this.state);

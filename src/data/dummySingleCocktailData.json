@@ -1,0 +1,11 @@
+{
+    "data": {
+        "id": 1,
+        "name": "mojito",
+        "imageURL": "mojito.jpg",
+        "description": "mix iit up!!!",
+        "ingredients": "white rum, lime, soda water",
+        "glass": "tumbler",
+        "rating": 4
+    }
+}

@@ -3,10 +3,10 @@ import Header from './Header';
 import Footer from './Footer';
 import Cocktail from './Cocktail';
 import DropDownMenu from './DropDownMenu';
-import './App.css';
+import './../App.css';
 import {
   BrowserRouter as Router,
-  Route, Switch, Link
+  Route, Switch,
 } from "react-router-dom";
 
 const App = ({
