@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+
 class Loading extends Component {
     componentDidMount() {
         if (!this.props.loaded) {
