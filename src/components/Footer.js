@@ -5,9 +5,8 @@ class Footer extends React.Component {
     render() {
         return (
             <footer className="page-footer">
-                <p>
-                    some footer info here
-                    </p>
+                <p className="copyright">&copy; Eleanor Judd, Claudia Piccioni, Charlotte Drew</p>
+                <p className="warning">Always drink responsibly.</p>
             </footer>
         )
     };

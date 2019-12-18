@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 * {
   box-sizing: border-box;
 }
@@ -22,6 +24,8 @@ code {
     monospace;
 }
 
+/* HEADER */
+
 .page-header {
   width: 100%;
   background: #e8677a;
@@ -31,8 +35,9 @@ code {
 
 }
 
+/* HERO - DROPDOWN */
 .hero {
-    height: 100vh;
+    height: 80vh;
     background-image: linear-gradient(lightgrey, grey), url("/assets/hero.jpg");
     background-blend-mode: multiply;
     width: 100%;
@@ -40,6 +45,7 @@ code {
     background-size: cover;
     padding: 10%;
     border-radius: 0;
+    margin-bottom: 0;
 }
 
 .form {
@@ -153,5 +159,25 @@ code {
  
 }
 
+/* FOOTER */
 
+.page-footer {
+    background: #bababa;
+    margin: 0;
+    padding: 30px 30px;
+    
+}
+
+.copyright {
+    margin: 0;
+    text-align: right;  
+}
+
+.warning {
+    margin: 0;
+    color: #e8677a;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+}
 

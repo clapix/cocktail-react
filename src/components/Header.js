@@ -3,7 +3,6 @@ import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
-import { Jumbotron, Container, Col, Row } from "react-bootstrap";
 
 class Header extends React.Component {
 
@@ -14,7 +13,7 @@ class Header extends React.Component {
                     <Link to="/">
                         <img 
                             src="assets/logo-header.png" 
-                            alt="logo"/>
+                            alt="mixologic-logo"/>
                     </Link>
                 </header>
             </Router>)
