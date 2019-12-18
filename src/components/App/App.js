@@ -32,16 +32,18 @@ render() {
       
         <Header/>
         
+        {/* home page */}
         <Route exact path="/" component={ DropDownMenu } />
         
-        {/* <Loading> */}
+        {/* cocktails list page */}
         <Route exact path="/cocktails" component={ Archive } />
-        {/* </Loading> */}
-
+        
+        {/* spirit-specific cocktails list page */}
         <Route exact path="/spirits/:id" render={({ match }) => (
           <Archive id={match.params.id} />
         )} />
 
+        {/* single cocktail page */}
         <Route exact path="/cocktails/:id" render={({ match }) => (
           <Cocktail id={match.params.id} />
         )} />
