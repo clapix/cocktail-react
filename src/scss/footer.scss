@@ -1,0 +1,21 @@
+/* FOOTER */
+
+.page-footer {
+    background: $neutralColour;
+    margin: 0;
+    padding: 30px 30px;
+    
+}
+
+.copyright {
+    margin: 0;
+    text-align: right;  
+}
+
+.warning {
+    margin: 0;
+    color: $popColour;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+}

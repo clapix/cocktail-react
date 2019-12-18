@@ -30,12 +30,12 @@ class DropDownMenu extends React.Component {
     }
 
     render() {
-        const { spirits } = this.props;
+        const { spirits, className } = this.props;
 
         return (
-            <Jumbotron className="hero">
+            <div className={className}>
                 <Form className="form" onSubmit={this.handleSubmit}>
-                    <Form.Label className="form-label">What spirit do you have?</Form.Label>
+                    <Form.Label className="form-label">{this.props.heading}</Form.Label>
                     <Form.Control 
                             className="form-control"
                             as="select"
@@ -55,7 +55,7 @@ class DropDownMenu extends React.Component {
                         <Button type='submit' className="button">Shake It!</Button>
                     
                 </Form>
-            </Jumbotron>
+            </div>
         )
     }
 }

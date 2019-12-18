@@ -1,0 +1,64 @@
+.archive-grid {
+    
+    padding: 20px;
+
+    @media (min-width: 600px){
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card {
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px $neutralColour);
+    margin: 10px;
+
+    h3 {
+        padding: 10px;
+        text-align: center;
+        font-family: $serifHeadFont;
+        font-weight: bold;
+        color: black;
+    }
+
+    h3:hover {
+        color: $popColour;
+        text-decoration: none;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    img:hover {
+        filter: contrast(50%);
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.menu {
+    // display: flex;
+    background-color: $neutralColour;
+    flex-wrap: nowrap;
+
+    .label {
+        font-size: 1.5rem;
+    }
+
+    .jumbotron {
+        padding: 0px;
+    }
+
+    .form {
+        margin-top: 0px;
+    }
+}

@@ -3,11 +3,12 @@ import React, { Component } from "react";
 import Header from '../Header';
 import Footer from '../Footer';
 import Cocktail from '../Cocktail';
-import Loading from '../Loading';
-import DropDownMenu from '../DropDownMenu';
+// import Loading from '../Loading';
+import DropDownMenuHome from '../DropDownMenu/DropDownMenuHome';
+
 import Archive from '../Archive';
 
-import './../../App.css';
+import './../../style.css';
 import {
   BrowserRouter as Router,
   Route, 
@@ -33,7 +34,7 @@ render() {
             <Header/>
             
             {/* home page */}
-            <Route exact path="/" component={ DropDownMenu } />
+            <Route exact path="/" component={ DropDownMenuHome } />
             
             {/* cocktails list page */}
             <Loading>

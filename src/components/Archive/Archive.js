@@ -1,26 +1,42 @@
-import React from "react";
+import React, { Component } from "react";
+import DropDownMenuArchive from "../DropDownMenu/DropDownMenuArchive";
 
-const Archive = ({ cocktails, submitted }) => (
+class Archive extends Component {
+    constructor(props){
+        super(props);
+    } 
 
-    !cocktails ? <p>No cocktails yet!</p> :
-        <>
-            <h2>We recommend...</h2>
-            <section classtitle="grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
-                { cocktails.map((cocktail, index) => (
-                    <div className="card" key={index}>
-                        <a href={"/cocktails/" + cocktail.id}>
-                            <h3>{ 
-                                cocktail.title.toLowerCase().replace(cocktail.title.charAt(0), cocktail.title.charAt(0).toUpperCase())
-                                }</h3>
-                            <img style={{maxWidth: "100%", objectFit: "cover"}} src={"./assets/" + cocktail.imageURL} /></a>
+    titleCaseHeading(string) {
+        return string;
+    }
 
-                    </div>
-                ))
 
-                }
-            </section>
-        </>
+    render() {
+      let { cocktails, submitted } = this.props;
 
-)
+      return ( 
+        !cocktails ? <p>No cocktails yet!</p> :
+            <>
+            <DropDownMenuArchive/>
+                <section className="archive-grid">
+                    { cocktails.map((cocktail, index) => (
+                        <div className="card" key={index}>
+                            <a href={"/cocktails/" + cocktail.id}>
+                                <h3>{ 
+                                    this.titleCaseHeading(cocktail.title)
+                                    
+                                    }</h3>
+                                <img 
+                                // style={{maxWidth: "100%", objectFit: "cover"}}
+                                 src={"../../assets/" + cocktail.imageURL} /></a>
 
+                        </div>
+                    ))
+
+                    }
+                </section>
+            </>
+        )
+    }
+}
 export default Archive;

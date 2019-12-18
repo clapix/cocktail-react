@@ -1,0 +1,114 @@
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* HEADER */
+
+.page-header {
+  width: 100%;
+  background: $popColour;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header-nav {
+    padding-right: 60px;
+    padding-top: 40px;
+}
+.header-ul {
+    list-style: none;
+
+}
+
+.header-link {
+  text-decoration: none;
+  color: $textColour;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+/* HERO - DROPDOWN */
+.jumbotron {
+    height: 80vh;
+    background-image: linear-gradient(lightgrey, grey), url("/assets/hero.jpg");
+    background-blend-mode: multiply;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    padding: 10%;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.jumbotron .form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  margin-top: 8%;
+
+}
+
+.form-label {
+  color: $textColour;
+  font-size: 2.2em;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.form-control {
+  max-width: 40%;
+  margin: 10px;
+  border-bottom: 3px solid $popColour;
+  color: $popColour;
+  font-weight: bold;
+  font-size: 1.2em;
+
+}
+
+.form-control:focus {
+  max-width: 40%;
+  margin: 10px;
+  border-bottom: 3px solid $popColour;
+  color: $popColour;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.button {
+  background: $popColour;
+  border: $popColour;
+  padding: 10px 30px;
+  margin: 10px;
+  font-weight: bold;
+  
+}
