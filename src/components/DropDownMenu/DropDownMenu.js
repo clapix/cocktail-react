@@ -1,13 +1,10 @@
 import React from 'react';
-import { data } from '../../data/dummySpirits';
-// import { sendDataToAPI } from './data/api';
 import { Jumbotron, Form, Button } from "react-bootstrap";
 
 class DropDownMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // spirits: [],
             selected: 0,
             submitted: false,
         }
@@ -27,14 +24,13 @@ class DropDownMenu extends React.Component {
     // sendDataToAPI(this.state);
 
     handleChangeSpirit(event) {
-        console.log(event.currentTarget.value);
         this.setState({
             selected: event.currentTarget.value,
         });
     }
 
     render() {
-        // const spirits = [1: { spirit: 'Whisky', 'Gin', 'Vodka']
+        const { spirits } = this.props;
 
         return (
             <Jumbotron className="hero">
@@ -44,13 +40,14 @@ class DropDownMenu extends React.Component {
                             className="form-control"
                             as="select"
                             onChange={this.handleChangeSpirit}
+                            onClick={this.handleDropDown}
                         // value={data[1]}
                         >
-                            {data.map((spirit) =>
+                            {spirits.map((spirit) =>
                                 <option
                                     value={spirit.id}
                                     key={spirit.id}
-                                >{spirit.spirit}
+                                >{spirit.spirit.toLowerCase().replace(spirit.spirit.charAt(0), spirit.spirit.charAt(0).toUpperCase())}
                                 </option>
                             )}
                         </Form.Control>
