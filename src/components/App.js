@@ -2,7 +2,7 @@ import React from "react";
 import Header from './Header';
 import Footer from './Footer';
 import Cocktail from './Cocktail';
-import Loading from './Loading';
+// import Loading from './Loading';
 
 import DropDownMenu from './DropDownMenu';
 import Archive from './Archive';
