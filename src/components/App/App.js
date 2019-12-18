@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import Header from '../Header';
 import Footer from '../Footer';
@@ -9,7 +10,8 @@ import Archive from '../Archive';
 import './../../App.css';
 import {
   BrowserRouter as Router,
-  Route, Switch,
+  Route, 
+  Switch,
 } from "react-router-dom";
 import { render } from "@testing-library/react";
 
@@ -26,41 +28,32 @@ render() {
     return <p>Loading...</p>
   }
   return ( 
-    <>
-      <Header />
+    <Router>
+      
+        <Header/>
+        
+        <Route exact path="/" component={ DropDownMenu } />
+        
+        {/* <Loading> */}
+        <Route exact path="/cocktails" component={ Archive } />
+        {/* </Loading> */}
 
-      {/* // homepage
-// single cocktail page
-// result page
-// create a cocktail
-// edit a cocktail */}
+        <Route exact path="/spirits/:id" render={({ match }) => (
+          <Archive id={match.params.id} />
+        )} />
 
-      {/* <Router>
-        <Switch> */}
-          {/* <Route exact path="/" component={DropDownMenu} /> */}
-          <DropDownMenu />
-          {/* <Loading> */}
-          { !submitted ? null : <Archive />}
-            
-          {/* </Loading> */}
+        <Route exact path="/cocktails/:id" render={({ match }) => (
+          <Cocktail id={match.params.id} />
+        )} />
 
+        {/* <Route exact path="/cocktails/spirit/:id/" component={CreateCocktail} /> */}
+        {/* <Route exact path="/cocktails/spirit/:id/" render={({ match }) => (
+        <EditCocktail id={match.params.id} />
+        <Route exact path="/cocktails/create" component={CreateCocktail} />
+              )} /> */}
+        <Footer />
+    </Router> 
 
-          {/* <Route path="/spirits" component={Archive} /> */}
-
-          {/* <Route exact path="/cocktails/:id" render={({ match }) => (
-            <Cocktail id={match.params.id} />
-          )} /> */}
-
-          {/* <Route exact path="/cocktails/spirit/:id/" component={CreateCocktail} /> */}
-          {/* <Route exact path="/cocktails/spirit/:id/" render={({ match }) => (
-    <EditCocktail id={match.params.id} />
-    <Route exact path="/cocktails/create" component={CreateCocktail} />
-                )} /> */}
-         {/* </Switch> */}
-      {/* </Router>  */}
-
-      <Footer />
-    </>
   )}
 }
 
