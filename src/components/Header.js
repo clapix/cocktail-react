@@ -4,18 +4,17 @@ import {
     Link
 } from "react-router-dom";
 
-
 class Header extends React.Component {
 
     render() {
         return (
             <Router>
                 <header className="page-header">
-
                     <Link to="/">
-                        <h1 className="page-header">Mixologic</h1>
+                        <img 
+                            src="assets/logo-header.png" 
+                            alt="mixologic-logo"/>
                     </Link>
-
                 </header>
             </Router>)
 

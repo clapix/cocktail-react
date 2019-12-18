@@ -1,6 +1,7 @@
 import React from 'react';
 import { data } from '../../data/dummySpirits';
 // import { sendDataToAPI } from './data/api';
+import { Jumbotron, Form, Button } from "react-bootstrap";
 
 class DropDownMenu extends React.Component {
     constructor(props) {
@@ -36,24 +37,27 @@ class DropDownMenu extends React.Component {
         // const spirits = [1: { spirit: 'Whisky', 'Gin', 'Vodka']
 
         return (
-            <form onSubmit={this.handleSubmit} >
-                <label>
-                    Select the spirit:
-                <select
-                        onChange={this.handleChangeSpirit}
-                    // value={data[1]}
-                    >
-                        {data.map((spirit) =>
-                            <option
-                                value={spirit.id}
-                                key={spirit.id}
-                            >{spirit.spirit}
-                            </option>
-                        )}
-                    </select>
-                    <input type='submit' value='Mix' />
-                </label>
-            </form>
+            <Jumbotron className="hero">
+                <Form className="form" onSubmit={this.handleSubmit}>
+                    <Form.Label className="form-label">What spirit do you have?</Form.Label>
+                    <Form.Control 
+                            className="form-control"
+                            as="select"
+                            onChange={this.handleChangeSpirit}
+                        // value={data[1]}
+                        >
+                            {data.map((spirit) =>
+                                <option
+                                    value={spirit.id}
+                                    key={spirit.id}
+                                >{spirit.spirit}
+                                </option>
+                            )}
+                        </Form.Control>
+                        <Button type='submit' className="button">Shake It!</Button>
+                    
+                </Form>
+            </Jumbotron>
         )
     }
 }
