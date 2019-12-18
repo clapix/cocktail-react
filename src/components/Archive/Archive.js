@@ -10,7 +10,6 @@ class Archive extends Component {
         return string;
     }
 
-
     render() {
       let { cocktails, submitted } = this.props;
 
