@@ -36,7 +36,10 @@ code {
 
 }
 
-
+.header-nav {
+    padding-right: 60px;
+    padding-top: 40px;
+}
 .header-ul {
     list-style: none;
 
