@@ -4,3 +4,8 @@ export const cocktailList = (data, state) => ({
     loaded: true,
     cocktails: data,
 })
+
+export const spiritsList = (data, state) => ({
+    type: 'spiritsList',
+    spirits: data,
+})

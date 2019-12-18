@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 import DropDownMenu from './DropDownMenu';
-import { getList } from "../../data/actions/api";
-
+import { getList, getSpirits } from "../../data/actions/api";
 
 const mapStateToProps = state => {
     return {
         selected: state.selected,
+        spirits: state.spirits,
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleSave: state => dispatch(getList(state))
+        handleSave: state => dispatch(getList(state)),
+        handleSpiritList: () => dispatch(getSpirits()),
     };
 };
 

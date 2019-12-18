@@ -1,23 +1,31 @@
-import React from "react";
-import Header from './Header';
-import Footer from './Footer';
-import Cocktail from './Cocktail';
-import Loading from './Loading';
+import React, { Component } from "react";
+import Header from '../Header';
+import Footer from '../Footer';
+import Cocktail from '../Cocktail';
+// import Loading from '../Loading';
+import DropDownMenu from '../DropDownMenu';
+import Archive from '../Archive';
 
-import DropDownMenu from './DropDownMenu';
-import Archive from './Archive';
-
-import './../App.css';
+import './../../App.css';
 import {
   BrowserRouter as Router,
   Route, Switch,
 } from "react-router-dom";
+import { render } from "@testing-library/react";
 
-const App = ({
-  spirits,
-  selected,
-  cocktails,
-}) => (
+class App extends Component {
+
+  componentDidMount() {
+    this.props.handleLoad();
+}
+
+render() { 
+
+  const { spirits } = this.props;
+  if (!spirits.length){ 
+    return <p>Loading...</p>
+  }
+  return ( 
     <>
       <Header />
 
@@ -52,6 +60,7 @@ const App = ({
 
       <Footer />
     </>
-  );
+  )}
+}
 
 export default App;
