@@ -1,11 +1,12 @@
 import React from 'react';
 import { Jumbotron, Form, Button } from "react-bootstrap";
+import { withRouter } from "react-router-dom";
 
 class DropDownMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: 0,
+            selected: 1,
             submitted: false,
         }
         this.handleChangeSpirit = this.handleChangeSpirit.bind(this);
@@ -19,7 +20,7 @@ class DropDownMenu extends React.Component {
         })
         this.props.handleSelected({...this.state});
         this.props.handleSave({ ...this.state });
-        
+        this.props.history.push(`/spirits/${this.state.selected}`);
     }
 
     handleChangeSpirit(event) {
@@ -59,4 +60,4 @@ class DropDownMenu extends React.Component {
     }
 }
 
-export default DropDownMenu
+export default withRouter(DropDownMenu);
