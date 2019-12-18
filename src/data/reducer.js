@@ -1,9 +1,10 @@
 // import initial, for reset
 import initial from "./initial";
 import { getSpirits } from "./actions/api";
+import { setSelected } from "./actions/state";
 
 const getCocktails = (state, { cocktails }) => {
-    console.log(cocktails);
+    // console.log(cocktails);
     return {
         ...state,
         submitted: true,
@@ -13,10 +14,18 @@ const getCocktails = (state, { cocktails }) => {
 }
 
 const listSpirits = (state, { spirits }) => {
-    console.log(spirits)
+    console.log(spirits);
     return {
         ...state,
         spirits: spirits,
+    }
+}
+
+const selected = (state, { selected }) => {
+    console.log(selected);
+    return {
+        ...state,
+        selected,
     }
 }
 
@@ -26,6 +35,7 @@ const reducer = (state, action) => {
         //function composition for multiple behaviours on one action
         case "cocktailList": return getCocktails(state, action);
         case "spiritsList": return listSpirits(state, action);
+        case "setSelected": return selected(state, action);
         default: return state;
     }
 };
