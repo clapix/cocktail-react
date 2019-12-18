@@ -10,10 +10,5 @@ const mapStateToProps = ({cocktails, submitted}) => {
     }
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         handleSave: state => dispatch(getList(state))
-//     };
-// };
 
 export default connect(mapStateToProps)(Archive);

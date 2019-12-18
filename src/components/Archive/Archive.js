@@ -12,7 +12,7 @@ const Archive = ({ cocktails, submitted }) => (
                             <h3>{ 
                                 cocktail.title.toLowerCase().replace(cocktail.title.charAt(0), cocktail.title.charAt(0).toUpperCase())
                                 }</h3>
-                            <img style={{maxWidth: "100%", objectFit: "cover"}} src={"./assets/" + cocktail.imageURL} /></a>
+                            <img style={{maxWidth: "100%", objectFit: "cover"}} src={"../../assets/" + cocktail.imageURL} /></a>
 
                     </div>
                 ))
