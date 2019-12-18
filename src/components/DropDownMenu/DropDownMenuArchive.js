@@ -8,6 +8,8 @@ const mapStateToProps = state => {
     return {
         selected: state.selected,
         spirits: state.spirits,
+        className: "menu",
+        heading: "",
     }
 }
 
