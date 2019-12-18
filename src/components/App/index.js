@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 import { getSpirits } from "../../data/actions/api";
 import App from "./App";
 
-const mapStateToProps = ({ spirits }) => ({
+const mapStateToProps = ({ spirits, submitted }) => ({
     spirits,
+    submitted
 });
 
 const mapDispatchToProps = (dispatch) => ({

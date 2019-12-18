@@ -9,7 +9,9 @@ const Archive = ({ cocktails, submitted }) => (
                 { cocktails.map((cocktail, index) => (
                     <div className="card" key={index}>
                         <a href={"/cocktails/" + cocktail.id}>
-                            <h3>{cocktail.title.toLowerCase().replace(cocktail.title.charAt(0), cocktail.title.charAt(0).toUpperCase())}</h3>
+                            <h3>{ 
+                                cocktail.title.toLowerCase().replace(cocktail.title.charAt(0), cocktail.title.charAt(0).toUpperCase())
+                                }</h3>
                             <img style={{maxWidth: "100%", objectFit: "cover"}} src={"./assets/" + cocktail.imageURL} /></a>
 
                     </div>

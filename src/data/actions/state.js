@@ -1,4 +1,4 @@
-export const cocktailList = (data, state) => ({
+export const cocktailList = (data) => ({
     type: 'cocktailList',
     submitted: true,
     loaded: true,
@@ -8,4 +8,9 @@ export const cocktailList = (data, state) => ({
 export const spiritsList = (data, state) => ({
     type: 'spiritsList',
     spirits: data,
+})
+
+export const setSelected = (state) => ({
+    type: 'setSelected',
+    selected: state.selected,
 })

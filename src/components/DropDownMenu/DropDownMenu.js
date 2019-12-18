@@ -13,15 +13,14 @@ class DropDownMenu extends React.Component {
     }
 
     handleSubmit(event) {
-
         event.preventDefault();
         this.setState({
             submitted: true
         })
+        this.props.handleSelected({...this.state});
         this.props.handleSave({ ...this.state });
+        
     }
-
-    // sendDataToAPI(this.state);
 
     handleChangeSpirit(event) {
         this.setState({
@@ -43,10 +42,11 @@ class DropDownMenu extends React.Component {
                             onClick={this.handleDropDown}
                         // value={data[1]}
                         >
-                            {spirits.map((spirit) =>
+                            { spirits.map((spirit) =>
                                 <option
-                                    value={spirit.id}
                                     key={spirit.id}
+                                    value={spirit.id}
+                                    
                                 >{spirit.spirit.toLowerCase().replace(spirit.spirit.charAt(0), spirit.spirit.charAt(0).toUpperCase())}
                                 </option>
                             )}

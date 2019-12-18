@@ -23,7 +23,7 @@ class App extends Component {
 
 render() { 
 
-  const { spirits } = this.props;
+  const { spirits, submitted } = this.props;
   if (!spirits.length){ 
     return <p>Loading...</p>
   }
@@ -53,6 +53,7 @@ render() {
               )} /> */}
         <Footer />
     </Router> 
+
   )}
 }
 
