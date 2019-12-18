@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Header from '../Header';
 import Footer from '../Footer';
-import Cocktail from '../Cocktail';
+//import Cocktail from '../Cocktail/Cocktail';
 import Loading from '../Loading';
 import DropDownMenu from '../DropDownMenu';
 import Archive from '../Archive';
@@ -47,9 +47,9 @@ render() {
             )} />
 
             {/* single cocktail page */}
-            <Route exact path="/cocktails/:id" render={({ match }) => (
+            {/* <Route exact path="/cocktails/:id" render={({ match }) => (
               <Cocktail id={match.params.id} />
-            )} />
+            )} /> */}
 
             {/* <Route exact path="/cocktails/spirit/:id/" component={CreateCocktail} /> */}
             {/* <Route exact path="/cocktails/spirit/:id/" render={({ match }) => (

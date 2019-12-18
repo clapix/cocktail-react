@@ -1,5 +1,5 @@
 import axios from '../../axios';
-import { cocktailList, spiritsList, setSelected } from './state';
+import { cocktailList, spiritsList, setSelected, cocktails } from './state';
 
 export const getList = (state) => dispatch => {
     
@@ -21,4 +21,11 @@ export const getCocktails = () => dispatch => {
     // now use axios to make an API request
     axios.get("/cocktails").then(({ data }) => {
         dispatch(cocktailList(data.data));
+}); };
+
+export const getCocktail = (state) => dispatch => {
+    // now use axios to make an API request
+    axios.get(`/cocktails/${state.selected}`).then(({ data }) => {
+        console.log(data.data);
+        dispatch(cocktails(data.data));
 }); };
