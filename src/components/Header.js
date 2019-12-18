@@ -15,13 +15,11 @@ class Header extends React.Component {
                             src="assets/logo-header.png" 
                             alt="mixologic-logo"/>
                     </Link>
-                    <nav className="burger-menu">
                     
-                    </nav>
                     <nav className="header-nav">
                         <ul className="header-ul">
                             <li><a className="header-link" href="/cocktails">
-                                </a></li>
+                                Browse Cocktails</a></li>
                         </ul>
                     </nav>
                 </header>
