@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Header from '../Header';
 import Footer from '../Footer';
 import Cocktail from '../Cocktail';
-// import Loading from '../Loading';
+import Loading from '../Loading';
 import DropDownMenuHome from '../DropDownMenu/DropDownMenuHome';
 import Archive from '../Archive';
 
@@ -29,31 +29,35 @@ render() {
   }
   return ( 
     <Router>
-      
-        <Header/>
-        
-        {/* home page */}
-        <Route exact path="/" component={ DropDownMenuHome } />
-        
-        {/* cocktails list page */}
-        <Route exact path="/cocktails" component={ Archive } />
-        
-        {/* spirit-specific cocktails list page */}
-        <Route exact path="/spirits/:id" render={({ match }) => (
-          <Archive id={match.params.id} />
-        )} />
+        {/* <Switch> */}
+            <Header/>
+            
+            {/* home page */}
+            <Route exact path="/" component={ DropDownMenuHome } />
+            
+            {/* cocktails list page */}
+            <Loading>
+              <Route exact path="/cocktails" component={ Archive } />
+            </Loading>
+            
+            
+            {/* spirit-specific cocktails list page */}
+            <Route exact path="/spirits/:id" render={({ match }) => (
+              <Archive id={match.params.id} />
+            )} />
 
-        {/* single cocktail page */}
-        <Route exact path="/cocktails/:id" render={({ match }) => (
-          <Cocktail id={match.params.id} />
-        )} />
+            {/* single cocktail page */}
+            <Route exact path="/cocktails/:id" render={({ match }) => (
+              <Cocktail id={match.params.id} />
+            )} />
 
-        {/* <Route exact path="/cocktails/spirit/:id/" component={CreateCocktail} /> */}
-        {/* <Route exact path="/cocktails/spirit/:id/" render={({ match }) => (
-        <EditCocktail id={match.params.id} />
-        <Route exact path="/cocktails/create" component={CreateCocktail} />
-              )} /> */}
-        <Footer />
+            {/* <Route exact path="/cocktails/spirit/:id/" component={CreateCocktail} /> */}
+            {/* <Route exact path="/cocktails/spirit/:id/" render={({ match }) => (
+            <EditCocktail id={match.params.id} />
+            <Route exact path="/cocktails/create" component={CreateCocktail} />
+                  )} /> */}
+            <Footer />
+        {/* </Switch> */}
     </Router> 
 
   )}

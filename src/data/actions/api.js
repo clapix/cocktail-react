@@ -8,9 +8,7 @@ export const getList = (state) => dispatch => {
         console.log(state.selected);
         dispatch(cocktailList(data.data), setSelected(state.selected));
     })
-    // () => {
-    // dispatch(cocktailList(dummyCocktailData, state));
-    // }
+    
 }
 
 export const getSpirits = () => dispatch => {
@@ -18,3 +16,9 @@ export const getSpirits = () => dispatch => {
         dispatch(spiritsList(data.data));
     })
 }
+
+export const getCocktails = () => dispatch => {
+    // now use axios to make an API request
+    axios.get("/cocktails").then(({ data }) => {
+        dispatch(cocktailList(data.data));
+}); };
