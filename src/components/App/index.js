@@ -3,9 +3,10 @@ import { connect } from "react-redux";
 import { getSpirits } from "../../data/actions/api";
 import App from "./App";
 
-const mapStateToProps = ({ spirits, submitted }) => ({
+const mapStateToProps = ({ spirits, submitted, displayAgeConfirm }) => ({
     spirits,
-    submitted
+    submitted,
+    displayAgeConfirm
 });
 
 const mapDispatchToProps = (dispatch) => ({
