@@ -18,7 +18,7 @@ class AgeConfirm extends Component {
 
             <Container>
                 <h2>Please confirm that you are over the legal drinking age for your country of residence.</h2>
-                <Form>
+                <Form onSubmit={ this.handleAgeConfirm }>
                     <Button 
                     type="submit" 
                     variant="btn btn-danger"
