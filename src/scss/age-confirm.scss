@@ -1,5 +1,6 @@
 .age-confirm {
     height: 80vh;
+    padding: 10%;
     background-image: linear-gradient(lightgrey, grey), url("/assets/hero.jpg");
     background-blend-mode: multiply;
     width: 100%;
@@ -15,7 +16,7 @@
     padding: 20px;
     display: flex;
     justify-content: flex-end;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
   
 }
 
@@ -45,7 +46,7 @@
         padding: 20px;
         display: flex;
         justify-content: flex-end;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
       
     }
     
