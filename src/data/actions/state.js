@@ -20,5 +20,15 @@ export const spiritsList = (data, state) => ({
 
 export const setSelected = (state) => ({
     type: 'setSelected',
-    selected: state,
+
+    selected: state.selected,
+})
+
+export const submitAgeConfirm = (state) => ({
+   
+        type: 'submitAgeConfirm',
+        displayAgeConfirm: false,
+        
+  
+
 })

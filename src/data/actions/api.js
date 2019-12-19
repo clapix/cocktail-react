@@ -30,3 +30,4 @@ export const getCocktail = (id) => dispatch => {
     axios.get(`/cocktails/${id}`).then(({ data }) => {
         dispatch(cocktails(data.data));
 }); };
+

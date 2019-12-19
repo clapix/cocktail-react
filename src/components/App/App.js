@@ -6,6 +6,7 @@ import Cocktail from '../Cocktail';
 import Loading from '../Loading';
 import DropDownMenuHome from '../DropDownMenu/DropDownMenuHome';
 import Archive from '../Archive';
+import AgeConfirm from '../AgeConfirm';
 
 import './../../style.css';
 import {
@@ -21,16 +22,24 @@ class App extends Component {
 
 render() { 
 
-  const { spirits } = this.props;
+
+  const { spirits, submitted, displayAgeConfirm } = this.props;
+
   if (!spirits.length){ 
     return <p>Loading...</p>
   }
   return ( 
     <Router>
             <Header/>
-            
+          
             {/* home page */}
-            <Route exact path="/" component={ DropDownMenuHome } />
+            <Route exact path="/" render={() => (
+              <>
+                { !displayAgeConfirm ? 
+                <DropDownMenuHome /> :
+                <AgeConfirm/> }
+              </>
+            )} />
             
             {/* cocktails list page */}
             <Loading>

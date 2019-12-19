@@ -5,6 +5,7 @@ const initial = {
     loaded: false,
     selected: 1,
     cocktail: {},
+    displayAgeConfirm: true,
 };
 
 export default initial;

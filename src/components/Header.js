@@ -6,6 +6,9 @@ import {
 class Header extends React.Component {
 
     render() {
+
+        let displayAgeConfirm = this.props;
+
         return (
             <Router>
                 <header className="page-header">
@@ -17,10 +20,12 @@ class Header extends React.Component {
 
                     <nav className="header-nav">
                         <ul className="header-ul">
-                            <li><a className="header-link" href="/cocktails">
-                                Browse Cocktails</a></li>
+                            <li><a className="header-link" 
+                            href="/cocktails">
+                            Browse Cocktails</a></li>
                         </ul>
                     </nav>
+                    
                 </header>
             </Router>)
 

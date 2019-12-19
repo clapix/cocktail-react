@@ -1,3 +1,9 @@
+
+// import initial, for reset
+import initial from "./initial";
+import { getSpirits } from "./actions/api";
+import { setSelected, submitAgeConfirm } from "./actions/state";
+
 const getCocktails = (state, { 
         cocktails
 }) => {
@@ -31,6 +37,15 @@ const cocktailList = (state, { cocktail, selected }) => {
         selected
     }
 }
+
+const ageConfirm = (state, { displayAgeConfirm }) => {
+    // console.log(displayAgeConfirm);
+    return {
+        ...state,
+        displayAgeConfirm: false,
+    }
+    
+}
 // main reducer function
 const reducer = (state, action) => {
     switch (action.type) {
@@ -39,6 +54,7 @@ const reducer = (state, action) => {
         case "spiritsList": return listSpirits(state, action);
         case "setSelected": return selected(state, action);
         case "cocktails": return cocktailList(state, action);
+        case "submitAgeConfirm": return ageConfirm(state,action);
         default: return state;
     }
 };
