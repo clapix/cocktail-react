@@ -3,6 +3,14 @@ export const cocktailList = (data) => ({
     submitted: true,
     loaded: true,
     cocktails: data,
+    
+})
+
+export const cocktails = (data) => ({
+    type: 'cocktails',
+    loaded: true,
+    // cocktails: data,
+    cocktail: data,  
 })
 
 export const spiritsList = (data, state) => ({

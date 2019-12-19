@@ -4,6 +4,7 @@ const initial = {
     cocktails: [],
     loaded: false,
     selected: 1,
+    cocktail: {},
 };
 
 export default initial;

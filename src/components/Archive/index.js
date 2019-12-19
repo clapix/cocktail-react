@@ -4,8 +4,8 @@ import { getList } from "../../data/actions/api";
 
 const mapStateToProps = ({cocktails, submitted}) => {
     return {
-        cocktails: cocktails,
-        submitted: submitted,
+        cocktails,
+        submitted,
     }
 }
 
