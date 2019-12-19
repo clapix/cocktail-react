@@ -14,7 +14,7 @@ class Header extends React.Component {
                 <header className="page-header">
                     <a href="/">
                         <img
-                            src="assets/logo-header.png"
+                            src="../../assets/logo-header.png"
                             alt="mixologic-logo" />
                     </a>
 

@@ -2,16 +2,12 @@ import React, { Component } from "react";
 import DropDownMenuArchive from "../DropDownMenu/DropDownMenuArchive";
 
 class Archive extends Component {
-    constructor(props){
-        super(props);
-    } 
-
     titleCaseHeading(string) {
         return string;
     }
 
     render() {
-      let { cocktails, submitted } = this.props;
+      let { cocktails } = this.props;
 
       const sortedCocktails = cocktails.sort((a, b)=>{
         if (a.title < b.title) {

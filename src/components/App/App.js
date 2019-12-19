@@ -12,9 +12,7 @@ import './../../style.css';
 import {
   BrowserRouter as Router,
   Route, 
-  Switch,
 } from "react-router-dom";
-import { render } from "@testing-library/react";
 
 class App extends Component {
 
@@ -24,6 +22,7 @@ class App extends Component {
 
 render() { 
 
+
   const { spirits, submitted, displayAgeConfirm } = this.props;
 
   if (!spirits.length){ 
@@ -31,7 +30,6 @@ render() {
   }
   return ( 
     <Router>
-        {/* <Switch> */}
             <Header/>
           
             {/* home page */}
@@ -59,13 +57,7 @@ render() {
               <Cocktail id={match.params.id} />
             )} />
 
-            {/* <Route exact path="/cocktails/spirit/:id/" component={CreateCocktail} /> */}
-            {/* <Route exact path="/cocktails/spirit/:id/" render={({ match }) => (
-            <EditCocktail id={match.params.id} />
-            <Route exact path="/cocktails/create" component={CreateCocktail} />
-                  )} /> */}
             <Footer />
-        {/* </Switch> */}
     </Router> 
 
   )}

@@ -1,12 +1,12 @@
-export const cocktailList = (data) => ({
+export const cocktailList = (data, selected) => ({
     type: 'cocktailList',
     submitted: true,
     loaded: true,
     cocktails: data,
-    
+    selected: selected,
 })
 
-export const cocktails = (data) => ({
+export const cocktails = (data,) => ({
     type: 'cocktails',
     loaded: true,
     // cocktails: data,
@@ -20,6 +20,7 @@ export const spiritsList = (data, state) => ({
 
 export const setSelected = (state) => ({
     type: 'setSelected',
+
     selected: state.selected,
 })
 
@@ -29,4 +30,5 @@ export const submitAgeConfirm = (state) => ({
         displayAgeConfirm: false,
         
   
+
 })
