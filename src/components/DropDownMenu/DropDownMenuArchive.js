@@ -17,7 +17,6 @@ const mapDispatchToProps = dispatch => {
     return {
         handleSave: state => dispatch(getList(state)),
         handleSpiritList: () => dispatch(getSpirits()),
-        handleSelected: (state) => dispatch(setSelected(state))
     };
 };
 

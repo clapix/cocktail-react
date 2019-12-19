@@ -4,7 +4,9 @@ import { cocktailList, spiritsList, setSelected, cocktails } from './state';
 //API request for all cocktails on system for given spirit, dispatching cocktailList state action 
 export const getList = (state) => dispatch => {
     axios.get(`/spirits/${state.selected}`).then(({ data }) => {
-        dispatch(cocktailList(data.data), setSelected(state.selected));
+        // dispatch();
+        // setSelected(state.selected)
+        dispatch(cocktailList(data.data, state.selected));
     })
 }
 
