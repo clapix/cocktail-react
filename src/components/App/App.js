@@ -24,7 +24,8 @@ class App extends Component {
 
 render() { 
 
-  const { spirits, submitted } = this.props;
+  const { spirits, submitted, displayAgeConfirm } = this.props;
+
   if (!spirits.length){ 
     return <p>Loading...</p>
   }
@@ -32,12 +33,14 @@ render() {
     <Router>
         {/* <Switch> */}
             <Header/>
-            
+          
             {/* home page */}
             <Route exact path="/" render={() => (
               <>
-                <AgeConfirm/>
-                <DropDownMenuHome />
+                { displayAgeConfirm ? 
+                  <AgeConfirm/> :
+                  <DropDownMenuHome /> 
+                }
               </>
             )} />
             
