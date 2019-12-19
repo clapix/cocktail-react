@@ -36,9 +36,7 @@
         border-radius: 0px 0px 10px 10px;
     }
 
-    img:hover {
-        filter: contrast(50%);
-    }
+    position: relative;
 }
 
 a:hover {
@@ -60,5 +58,29 @@ a:hover {
 
     .form {
         margin-top: 0px;
+    }
+}
+
+.card {
+    .card-overlay {
+        background-color: rgba(255, 255, 255, .5);
+        color: black;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px;
+        // display: none;
+    }
+
+    .card-overlay:hover {
+        background-color: rgba(255, 255, 255, .5);
+        color: $popColour;
+
+    }
+
+
+    .card-overlay li {
+        list-style: none;
     }
 }
