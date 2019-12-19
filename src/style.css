@@ -150,6 +150,7 @@ code {
   border-radius: 10px;
   filter: drop-shadow(5px 5px 5px #bababa);
   margin: 10px;
+  position: relative;
 }
 .card h3 {
   padding: 10px;
@@ -168,9 +169,6 @@ code {
   height: 300px;
   border-radius: 0px 0px 10px 10px;
 }
-.card img:hover {
-  filter: contrast(50%);
-}
 
 a:hover {
   text-decoration: none;
@@ -188,6 +186,23 @@ a:hover {
 }
 .menu .form {
   margin-top: 0px;
+}
+
+.card .card-overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+}
+.card .card-overlay:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #e8677a;
+}
+.card .card-overlay li {
+  list-style: none;
 }
 
 .form {

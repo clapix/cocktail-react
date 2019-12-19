@@ -14,21 +14,37 @@ class Archive extends Component {
     render() {
       let { cocktails, submitted } = this.props;
 
+      const sortedCocktails = cocktails.sort((a, b)=>{
+        if (a.title < b.title) {
+          return -1; //nameA comes first
+        }
+        if (a.title > b.title) {
+          return 1; // nameB comes first
+        }
+        return 0;  // names must be equal
+      });
+      
+      
       return ( 
         !cocktails ? <p>No cocktails yet!</p> :
             <>
             <DropDownMenuArchive/>
                 <section className="archive-grid">
-                    { cocktails.map((cocktail, index) => (
+                    { sortedCocktails.map((cocktail, index) => (
                         <div className="card" key={index}>
                             <a href={"/cocktails/" + cocktail.id}>
                                 <h3>{ 
                                     this.titleCaseHeading(cocktail.title)
-                                    
-                                    }</h3>
+                                    }
+                                </h3>
+                                <div className="card-overlay">
+                                    <ul>{cocktail.ingredients.split(", ").map((current, index) => (
+                                        <li key={index}>{current}</li>
+                                    ))}</ul>
+                                </div>
                                 <img 
-                                // style={{maxWidth: "100%", objectFit: "cover"}}
-                                 src={"../../assets/" + cocktail.imageURL} /></a>
+                                    alt={ cocktail.title }
+                                    src={"../../assets/" + cocktail.imageURL} /></a>
 
                         </div>
                     ))
