@@ -1,12 +1,6 @@
-// import initial, for reset
-import initial from "./initial";
-import { getSpirits } from "./actions/api";
-import { setSelected } from "./actions/state";
-
 const getCocktails = (state, { 
         cocktails
 }) => {
-    // console.log(cocktails);
     return {
         ...state,
         submitted: true,
@@ -17,7 +11,6 @@ const getCocktails = (state, {
 }
 
 const listSpirits = (state, { spirits }) => {
-    console.log(spirits);
     return {
         ...state,
         spirits: spirits,
@@ -25,7 +18,6 @@ const listSpirits = (state, { spirits }) => {
 }
 
 const selected = (state, { selected }) => {
-    console.log(selected);
     return {
         ...state,
         selected,
@@ -33,7 +25,6 @@ const selected = (state, { selected }) => {
 }
 
 const cocktailList = (state, { cocktail }) => {
-    console.log(cocktail);
     return {
         ...state,
         cocktail,
