@@ -24,10 +24,11 @@ const selected = (state, { selected }) => {
     }
 }
 
-const cocktailList = (state, { cocktail }) => {
+const cocktailList = (state, { cocktail, selected }) => {
     return {
         ...state,
         cocktail,
+        selected
     }
 }
 // main reducer function

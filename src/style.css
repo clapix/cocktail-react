@@ -249,6 +249,10 @@ a:hover {
   font-weight: bold;
 }
 
+.choose-spirit {
+  width: 30%;
+}
+
 .cocktail-single-content {
   padding: 30px;
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), white 10%);
