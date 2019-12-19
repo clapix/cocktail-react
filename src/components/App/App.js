@@ -6,6 +6,7 @@ import Cocktail from '../Cocktail';
 import Loading from '../Loading';
 import DropDownMenuHome from '../DropDownMenu/DropDownMenuHome';
 import Archive from '../Archive';
+import AgeConfirm from '../AgeConfirm';
 
 import './../../style.css';
 import {
@@ -33,7 +34,12 @@ render() {
             <Header/>
             
             {/* home page */}
-            <Route exact path="/" component={ DropDownMenuHome } />
+            <Route exact path="/" render={() => (
+              <>
+                <AgeConfirm/>
+                <DropDownMenuHome />
+              </>
+            )} />
             
             {/* cocktails list page */}
             <Loading>
