@@ -23,9 +23,9 @@ export const getCocktails = () => dispatch => {
         dispatch(cocktailList(data.data));
 }); };
 
-export const getCocktail = (state) => dispatch => {
+export const getCocktail = (id) => dispatch => {
     // now use axios to make an API request
-    axios.get(`/cocktails/${state.selected}`).then(({ data }) => {
+    axios.get(`/cocktails/${id}`).then(({ data }) => {
         console.log(data.data);
         dispatch(cocktails(data.data));
 }); };

@@ -4,15 +4,16 @@ import { getCocktail } from "../../data/actions/api";
 
 
 const mapStateToProps = ({ 
-    cocktail
+    cocktail,
+    
 }) => {
     return {
-        cocktail
+        cocktail,
     }
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    handleLoad: () => dispatch(getCocktail()),
+    handleLoadCocktail: (id) => dispatch(getCocktail(id)),
 });
 
 
