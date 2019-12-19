@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
 .App {
   text-align: center;
 }
@@ -155,7 +155,7 @@ code {
 .card h3 {
   padding: 10px;
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: bold;
   color: black;
 }
@@ -247,6 +247,121 @@ a:hover {
   padding: 10px 30px;
   margin: 10px;
   font-weight: bold;
+}
+
+.choose-spirit {
+  width: 30%;
+}
+
+.cocktail-single-content {
+  padding: 30px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), white 10%);
+  margin-top: 150px;
+}
+
+.image-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rating-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.glass-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.cocktail-image-background {
+  position: absolute;
+  top: 0px;
+  object-fit: cover;
+  filter: contrast(50%) hue-rotate(20deg) brightness(140%);
+  z-index: -10;
+  width: 100%;
+}
+
+.cocktail-image {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  height: 30%;
+  object-fit: cover;
+  border-radius: 5px;
+  filter: drop-shadow(10px 10px 10px #bababa);
+}
+@media (min-width: 800px) {
+  .cocktail-image {
+    display: inline-block;
+    left: 0px;
+  }
+}
+@media (min-width: 600px) {
+  .cocktail-image {
+    max-width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .cocktail-image {
+    max-width: 60%;
+  }
+}
+
+.cocktail-glass {
+  max-width: 20%;
+  position: relative;
+  right: 0px;
+}
+
+.title-offset {
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.description-block {
+  margin: 0 auto;
+}
+.description-block li {
+  margin: 10px 0;
+}
+
+.single-page-block {
+  padding: 30px;
+  margin: 30px auto;
+}
+.single-page-block ul {
+  padding-left: 0px;
+  list-style: none;
+}
+.single-page-block h2 {
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .single-page-block {
+    max-width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .single-page-block {
+    max-width: 60%;
+  }
+}
+
+.cocktail-glass {
+  max-width: 50px;
+}
+
+.author {
+  text-align: center;
 }
 
 /* FOOTER */
