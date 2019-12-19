@@ -8,12 +8,15 @@ class AgeConfirm extends Component {
     }
 
     handleAgeConfirm(e) {
-    
+        
         e.preventDefault();
         this.setState({ displayAgeConfirm: false });
+        this.props.handleAge();
     
     }
+
     render() {
+
         return (
 
             <Container>

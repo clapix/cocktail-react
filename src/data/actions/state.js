@@ -22,3 +22,11 @@ export const setSelected = (state) => ({
     type: 'setSelected',
     selected: state.selected,
 })
+
+export const submitAgeConfirm = (state) => {
+    return {
+        type: "submitAgeConfirm",
+        displayAgeConfirm: false,
+        
+    }; 
+};

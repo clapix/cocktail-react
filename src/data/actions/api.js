@@ -29,3 +29,4 @@ export const getCocktail = (id) => dispatch => {
         console.log(data.data);
         dispatch(cocktails(data.data));
 }); };
+
