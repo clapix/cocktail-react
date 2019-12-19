@@ -1,4 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+.age-confirm {
+  height: 80vh;
+  background-image: linear-gradient(lightgrey, grey), url("/assets/hero.jpg");
+  background-blend-mode: multiply;
+  width: 100%;
+  display: block;
+  background-size: cover;
+  padding: 10%;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.text-box {
+  width: 50%;
+  margin: 5% 25%;
+  border: 1px solid white;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.age-message {
+  color: white;
+  text-align: left;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.age-button {
+  position: relative;
+}
+
 .App {
   text-align: center;
 }

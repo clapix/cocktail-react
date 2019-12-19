@@ -37,10 +37,9 @@ render() {
             {/* home page */}
             <Route exact path="/" render={() => (
               <>
-                { displayAgeConfirm ? 
-                  <AgeConfirm/> :
-                  <DropDownMenuHome /> 
-                }
+                { !displayAgeConfirm ? 
+                <DropDownMenuHome /> :
+                <AgeConfirm/> }
               </>
             )} />
             

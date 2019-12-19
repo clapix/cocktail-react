@@ -19,15 +19,22 @@ class AgeConfirm extends Component {
 
         return (
 
-            <Container>
-                <h2>Please confirm that you are over the legal drinking age for your country of residence.</h2>
-                <Form onSubmit={ this.handleAgeConfirm }>
-                    <Button 
-                    type="submit" 
-                    variant="btn btn-danger"
-                    >Confirm</Button>
-                </Form>
-            </Container>
+            <div className="age-confirm">
+                <div className="text-box">
+                    <h2 
+                        className="age-message"
+                    >Please confirm that you are over the legal drinking age for your country of residence.</h2>
+                    <Form 
+                        
+                        onSubmit={ this.handleAgeConfirm }>
+                        <Button
+                        className="age-button"
+                        type="submit" 
+                        variant="btn btn-danger"
+                        >Confirm</Button>
+                    </Form>
+                </div>
+            </div>
         )
     };
 }
