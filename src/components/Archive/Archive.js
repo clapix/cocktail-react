@@ -30,6 +30,8 @@ class Archive extends Component {
             <DropDownMenuArchive/>
                 <section className="archive-grid">
                     { sortedCocktails.map((cocktail, index) => (
+
+                        
                         <div className="card" key={index}>
                             <a href={"/cocktails/" + cocktail.id}>
                                 <h3>{ 
@@ -46,7 +48,7 @@ class Archive extends Component {
                                     src={"../../assets/" + cocktail.imageURL} /></a>
 
                         </div>
-                    ))
+                    )) 
 
                     }
                 </section>
